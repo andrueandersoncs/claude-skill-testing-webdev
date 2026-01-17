@@ -1,3 +1,14 @@
+---
+name: generate-test
+description: Generate tests for code following TypeScript web application testing best practices
+argument-hint: "<file-path>"
+allowed-tools:
+  - Read
+  - Write
+  - Glob
+  - Grep
+---
+
 # Generate Test Command
 
 Generate tests for the specified code following TypeScript web application testing best practices.

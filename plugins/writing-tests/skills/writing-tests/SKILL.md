@@ -15,7 +15,7 @@ Stack: Bun (runtime/test runner), React, Effect (Schema/Arbitrary), Playwright (
 4. **Never mock React components** - Render real component trees
 5. **Prefer integration tests** - When cost is similar to unit tests
 
-See [Core Philosophy](TESTING_BEST_PRACTICES.md#core-philosophy) for the full testing manifesto.
+See [Core Philosophy](references/TESTING_BEST_PRACTICES.md#core-philosophy) for the full testing manifesto.
 
 ## What to Mock by Test Type
 
@@ -25,7 +25,7 @@ See [Core Philosophy](TESTING_BEST_PRACTICES.md#core-philosophy) for the full te
 | **Integration** | External APIs only | Internal services, DB, components |
 | **E2E** | External APIs (network intercept) | Everything else |
 
-See [Testing Boundaries](TESTING_BEST_PRACTICES.md#testing-boundaries) and [What to Mock](TESTING_BEST_PRACTICES.md#what-to-mock) for details.
+See [Testing Boundaries](references/TESTING_BEST_PRACTICES.md#testing-boundaries) and [What to Mock](references/TESTING_BEST_PRACTICES.md#what-to-mock) for details.
 
 ## Data Generation with Effect
 
@@ -54,7 +54,7 @@ test("serialization roundtrips", () => {
 })
 ```
 
-See [Data Generation with Effect Schema & Arbitrary](TESTING_BEST_PRACTICES.md#data-generation-with-effect-schema--arbitrary) for custom arbitraries, seeding, and advanced patterns.
+See [Data Generation with Effect Schema & Arbitrary](references/TESTING_BEST_PRACTICES.md#data-generation-with-effect-schema--arbitrary) for custom arbitraries, seeding, and advanced patterns.
 
 ## Test Layer Pattern (Effect DI)
 
@@ -78,7 +78,7 @@ export const PaymentServiceTest = Layer.succeed(PaymentService, {
 const TestEnv = Layer.mergeAll(PaymentServiceTest, DatabaseServiceLive, EmailServiceTest)
 ```
 
-See [Integration Testing with Effect Dependency Injection](TESTING_BEST_PRACTICES.md#integration-testing-with-effect-dependency-injection) for the full Layer pattern and stateful test services.
+See [Integration Testing with Effect Dependency Injection](references/TESTING_BEST_PRACTICES.md#integration-testing-with-effect-dependency-injection) for the full Layer pattern and stateful test services.
 
 ## React Component Testing
 
@@ -96,7 +96,7 @@ test("displays user", async () => {
 
 Test hooks via components that use them, not `renderHook` in isolation.
 
-See [React Component Testing](TESTING_BEST_PRACTICES.md#react-component-testing) for providing test context, testing hooks, and form testing with generated data.
+See [React Component Testing](references/TESTING_BEST_PRACTICES.md#react-component-testing) for providing test context, testing hooks, and form testing with generated data.
 
 ## E2E Testing with Playwright
 
@@ -112,11 +112,11 @@ test.afterEach(async () => {
 })
 ```
 
-See [End-to-End Testing with Playwright](TESTING_BEST_PRACTICES.md#end-to-end-testing-with-playwright) for:
-- [Project Setup](TESTING_BEST_PRACTICES.md#project-setup) - Playwright config
-- [Page Object Pattern](TESTING_BEST_PRACTICES.md#page-object-pattern-with-generated-data) - Reusable page classes
-- [Test Isolation and Cleanup](TESTING_BEST_PRACTICES.md#test-isolation-and-cleanup) - Fixtures and transaction rollback
-- [API Mocking for External Services](TESTING_BEST_PRACTICES.md#api-mocking-for-external-services-only) - Route interception
+See [End-to-End Testing with Playwright](references/TESTING_BEST_PRACTICES.md#end-to-end-testing-with-playwright) for:
+- [Project Setup](references/TESTING_BEST_PRACTICES.md#project-setup) - Playwright config
+- [Page Object Pattern](references/TESTING_BEST_PRACTICES.md#page-object-pattern-with-generated-data) - Reusable page classes
+- [Test Isolation and Cleanup](references/TESTING_BEST_PRACTICES.md#test-isolation-and-cleanup) - Fixtures and transaction rollback
+- [API Mocking for External Services](references/TESTING_BEST_PRACTICES.md#api-mocking-for-external-services-only) - Route interception
 
 ## Anti-Patterns
 
@@ -126,7 +126,7 @@ See [End-to-End Testing with Playwright](TESTING_BEST_PRACTICES.md#end-to-end-te
 - `expect(render(<Complex />)).toMatchSnapshot()` - Snapshots become noise
 - 4+ mocks in one test - Write integration test instead
 
-See [Anti-Patterns to Avoid](TESTING_BEST_PRACTICES.md#anti-patterns-to-avoid) for detailed explanations.
+See [Anti-Patterns to Avoid](references/TESTING_BEST_PRACTICES.md#anti-patterns-to-avoid) for detailed explanations.
 
 ## Quick Reference
 
@@ -138,9 +138,9 @@ See [Anti-Patterns to Avoid](TESTING_BEST_PRACTICES.md#anti-patterns-to-avoid) f
 | Multiple services interacting | Integration |
 | Full user journey, cross-browser | E2E |
 
-See [Quick Reference](TESTING_BEST_PRACTICES.md#quick-reference) for checklists:
-- [Data Generation Checklist](TESTING_BEST_PRACTICES.md#data-generation-checklist)
-- [Test Idempotency Checklist](TESTING_BEST_PRACTICES.md#test-idempotency-checklist)
+See [Quick Reference](references/TESTING_BEST_PRACTICES.md#quick-reference) for checklists:
+- [Data Generation Checklist](references/TESTING_BEST_PRACTICES.md#data-generation-checklist)
+- [Test Idempotency Checklist](references/TESTING_BEST_PRACTICES.md#test-idempotency-checklist)
 
 ## File Organization
 
@@ -164,4 +164,4 @@ e2e/
 └── utils/generators.ts
 ```
 
-See [Test File Organization](TESTING_BEST_PRACTICES.md#test-file-organization) for the full structure.
+See [Test File Organization](references/TESTING_BEST_PRACTICES.md#test-file-organization) for the full structure.

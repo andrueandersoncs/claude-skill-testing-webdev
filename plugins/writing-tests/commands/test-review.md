@@ -1,3 +1,13 @@
+---
+name: test-review
+description: Review test code for adherence to TypeScript web application testing best practices
+argument-hint: "[file-path]"
+allowed-tools:
+  - Read
+  - Glob
+  - Grep
+---
+
 # Test Review Command
 
 Review the test code in the current context or specified file(s) for adherence to testing best practices.
