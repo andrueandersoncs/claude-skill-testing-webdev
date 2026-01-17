@@ -1,0 +1,20 @@
+{
+  "name": "typescript-testing-tools",
+  "owner": {
+    "name": "Andrue Anderson"
+  },
+  "metadata": {
+    "description": "Testing guidance and tools for TypeScript web applications using Bun, React, Effect, and Playwright",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "writing-tests",
+      "source": "./plugins/writing-tests",
+      "description": "Comprehensive testing guidance with /test-review and /generate-test commands for TypeScript web apps",
+      "version": "1.0.0",
+      "keywords": ["testing", "typescript", "react", "effect", "playwright", "bun"],
+      "category": "testing"
+    }
+  ]
+}

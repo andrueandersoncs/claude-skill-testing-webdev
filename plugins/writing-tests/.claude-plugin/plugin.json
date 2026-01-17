@@ -1,0 +1,12 @@
+{
+  "name": "writing-tests",
+  "description": "Testing guidance and commands for TypeScript web applications using Bun, React, Effect, and Playwright",
+  "version": "1.0.0",
+  "author": {
+    "name": "Andrue Anderson"
+  },
+  "commands": {
+    "test-review": "./commands/test-review.md",
+    "generate-test": "./commands/generate-test.md"
+  }
+}

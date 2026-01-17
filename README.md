@@ -60,6 +60,43 @@ This skill activates when Claude is asked to write tests for TypeScript web appl
 - Mocking external dependencies
 - Writing maintainable assertions
 
+## Plugin Marketplace
+
+This repository includes a Claude Code plugin marketplace. Install the testing plugin to get commands for reviewing and generating tests.
+
+### Installation
+
+```bash
+# Add the marketplace
+/plugin marketplace add owner/claude-skill-testing-webdev
+
+# Install the plugin
+/plugin install writing-tests@typescript-testing-tools
+```
+
+### Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `/test-review` | Review test code for best practices compliance |
+| `/generate-test` | Generate tests for specified code |
+
+### Marketplace Structure
+
+```
+.claude-plugin/
+└── marketplace.json          # Marketplace manifest
+
+plugins/writing-tests/
+├── .claude-plugin/
+│   └── plugin.json           # Plugin manifest
+├── commands/
+│   ├── test-review.md        # /test-review command
+│   └── generate-test.md      # /generate-test command
+├── SKILL.md                  # Testing skill definition
+└── TESTING_BEST_PRACTICES.md # Extended documentation
+```
+
 ## Related
 
 - [SKILL.md](./SKILL.md) - Full skill definition
