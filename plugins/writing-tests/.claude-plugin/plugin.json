@@ -4,9 +4,5 @@
   "version": "1.0.0",
   "author": {
     "name": "Andrue Anderson"
-  },
-  "commands": {
-    "test-review": "./commands/test-review.md",
-    "generate-test": "./commands/generate-test.md"
   }
 }
